@@ -1,0 +1,52 @@
+<!-- CART -->
+  <div id="cart">
+    <h2>🛒 Your Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price (₹)</th>
+          <th>Quantity</th>
+          <th>Total (₹)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="cartItems"></tbody>
+    </table>
+    <div id="total">Total: ₹0</div>
+
+    <div class="buttons">
+      <button onclick="continueShopping()">⬅ Continue Shopping</button>
+      <button onclick="goToPayment()">💳 Buy Now</button>
+    </div>
+  </div>
+
+  <!-- PAYMENT SECTION -->
+  <div id="paymentSection">
+    <h2>💰 Select Payment Method</h2>
+    <form id="paymentForm">
+      <div class="payment-option">
+        <input type="radio" name="payment" value="COD" required> Cash on Delivery (COD)
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="payment" value="UPI"> UPI / Google Pay / PhonePe
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="payment" value="Card"> Debit / Credit Card
+      </div>
+      <br>
+      <button type="submit">Proceed to Pay</button>
+      <button type="button" onclick="backToCart()">⬅ Back to Cart</button>
+    </form>
+
+    <div id="processing">💳 Processing Payment...</div>
+  </div>
+
+  <!-- ORDER STATUS -->
+  <div id="orderStatus">
+    <h2>📦 Order Tracking</h2>
+    <div class="status-step" id="step1">1️⃣ Order Placed</div>
+    <div class="status-step" id="step2">2️⃣ Processing</div>
+    <div class="status-step" id="step3">3️⃣ Out for Delivery</div>
+    <div class="status-step" id="step4">4️⃣ Delivered ✅</div>
+  </div>
